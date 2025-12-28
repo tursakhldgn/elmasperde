@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>İletişim | Elmas Perde</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="elmasPerdeLogo.png" alt="Elmas Perde Logo" class="nav-logo-img">
+            Elmas Perde
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html">Ana Sayfa</a></li>
+            <li><a href="sepet.html">Sepetim</a></li>
+            <li><a href="olcu-alimi.html">Ölçü Alımı</a></li>
+            <li><a href="iletisim.html" class="active">İletişim</a></li>
+        </ul>
+        <div class="cart-icon" onclick="window.location.href='sepet.html'">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <section class="contact-hero">
+        <div class="container">
+            <h1>Bizimle İletişime Geçin</h1>
+            <p>Elmas Perde ekibi olarak size en iyi hizmeti sunmak için buradayız</p>
+        </div>
+    </section>
+
+    <section class="contact-content">
+        <div class="container">
+            <div class="contact-grid">
+                <div class="contact-card">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <h3>Adres</h3>
+                    <p>Gaziantep / Şahinbey<br>Cengiz Topel Mah. Mevlana Cami Sk. Elmas Perde</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-phone"></i>
+                    <h3>Telefon</h3>
+                    <p>Yakında Gelecek</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-whatsapp"></i>
+                    <h3>WhatsApp</h3>
+                    <p>ChatBot Kullanın</p>
+                </div>
+                <div class="contact-card">
+                    <i class="fas fa-clock"></i>
+                    <h3>Çalışma Saatleri</h3>
+                    <p>Pazartesi - Cuma: 09:00 - 19:00<br>Cumartesi: 09:00 - 17:00<br>Pazar: Kapalı</p>
+                </div>
+            </div>
+
+            <div class="contact-form-wrapper">
+                <h2>Mesaj Gönderin</h2>
+                <form id="contactForm">
+                    <div class="form-row">
+                        <input type="text" placeholder="Ad Soyad" required>
+                        <input type="tel" placeholder="Telefon" required>
+                    </div>
+                    <input type="email" placeholder="E-posta (isteğe bağlı)">
+                    <textarea placeholder="Mesajınız..." rows="6" required></textarea>
+                    <button type="submit" class="btn-primary">Gönder</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <script src="script.js"></script>
+    <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>694ff123bdb6af04d665451a,694fefc58902febe7655c4b1</script>
+</body>
+</html>

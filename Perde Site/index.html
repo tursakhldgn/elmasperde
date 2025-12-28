@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Elmas Perde</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+</head>
+<body>
+    <nav>
+        <a href="index.html" class="logo">
+            <img src="elmasPerdeLogo.png" alt="Elmas Perde Logo" class="nav-logo-img">
+            Elmas Perde
+        </a>
+        <ul class="nav-links">
+            <li><a href="index.html" class="active">Ana Sayfa</a></li>
+            <li><a href="sepet.html">Sepetim</a></li>
+            <li><a href="olcu-alimi.html">Ölçü Alımı</a></li>
+            <li><a href="iletisim.html">İletişim</a></li>
+        </ul>
+        <div class="cart-icon" onclick="window.location.href='sepet.html'">
+            <i class="fas fa-shopping-cart"></i>
+            <span class="cart-count" id="cartCount">0</span>
+        </div>
+    </nav>
+
+    <!-- Hero -->
+    <header class="hero">
+        <div class="container">
+            <h1>Elmas Perde</h1>
+            <p>Gaziantep'te atölyeden size özel ölçülerle kaliteli perdeler</p>
+            <a href="#products" class="btn-primary btn-large">Ürünleri İncele</a>
+        </div>
+    </header>
+
+    <!-- Ürünler -->
+    <section class="products-section" id="products">
+        <div class="container">
+            <h2>Popüler Perdelerimiz</h2>
+            <p class="section-subtitle">Beğendiğiniz perdeye tıklayın → genişlik girin → sepete ekleyin!</p>
+
+            <div class="products-grid">
+             
+                <div class="product-card" data-id="1">
+                    <img src="desensiz.jpeg" alt="Desensiz Modern Perde">
+                    <div class="product-info">
+                        <h3>Desensiz Modern Perde</h3>
+                        <div class="price">Metre başına 200 TL</div>
+                    </div>
+                </div>
+
+                
+                <div class="product-card" data-id="2">
+                    <img src="desenli2.jpeg" alt="Desenli Şık Perde">
+                    <div class="product-info">
+                        <h3>Desenli Şık Perde</h3>
+        
+                        <div class="price">Metre başına 250 TL</div>
+                    </div>
+                </div>
+
+              
+                <div class="product-card" data-id="3">
+                    <img src="desenli3.jpeg" alt="Modern Perde">
+                    <div class="product-info">
+                        <h3>Modern Perde</h3>
+                        <div class="price">Metre başına 250 TL</div>
+                    </div>
+                </div>
+
+            
+                <div class="product-card" data-id="4">
+                    <img src="desenli4.jpeg" alt="Şık Perde">
+                    <div class="product-info">
+                        <h3>Şık Perde</h3>
+                        <div class="price">Metre başına 250 TL</div>
+                    </div>
+                </div>
+
+               
+                <div class="product-card" data-id="5">
+                    <img src="desenli5.jpeg" alt="Misafir Odası Perde">
+                    <div class="product-info">
+                        <h3>Misafir Odası Perde</h3>
+                        <div class="price">Metre başına 300 TL</div>
+                    </div>
+                </div>
+
+                
+                <div class="product-card" data-id="6">
+                    <img src="zebra.jpg" alt="Zebra Perde">
+                    <div class="product-info">
+                        <h3>Zebra Perde</h3>
+                        <div class="price">Metre başına 400 TL</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div class="modal-overlay" id="modal">
+        <div class="modal">
+            <div class="modal-header">
+                <h3 id="modalTitle">Perde Seçimi</h3>
+                <button class="close-btn" onclick="closeModal()">×</button>
+            </div>
+            <div class="modal-body">
+                <img id="modalImg" src="" alt="">
+                <div class="measurement-inputs">
+                    <div>
+                        <label>Genişlik (cm)</label>
+                        <input type="number" id="width" min="50" max="500" placeholder="Örn: 250">
+                    </div>
+                    <div style="display:none;">
+                        <label>Yükseklik (cm)</label>
+                        <input type="number" id="height" placeholder="Örn: 240">
+                    </div>
+                </div>
+                <p style="margin-top:20px; font-weight:bold; color:#d35400;">
+                    Tahmini Fiyat: <span id="estimatedPrice">0</span> TL
+                </p>
+                <p style="margin-top:10px; font-size:0.95rem; color:#666; line-height:1.5;">
+                    ✓ Yükseklik ücretsiz olarak pencerenize göre ayarlanır<br>
+                    ✓ Üretime başlamak için toplam tutarın %50'si kapora zorunludur
+                </p>
+            </div>
+            <div class="modal-footer">
+                <button class="btn-primary" id="addBtn">Sepete Ekle</button>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+    <script id="messenger-widget-b" src="https://cdn.botpenguin.com/website-bot.js" defer>694ff123bdb6af04d665451a,694fefc58902febe7655c4b1</script>
+</body>
+</html>
